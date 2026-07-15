@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { pattern: /켭니다(\.|\?|!| |$)/g, replace: '켠다$1' },
             { pattern: /뺍니다(\.|\?|!| |$)/g, replace: '뺀다$1' },
             { pattern: /킵니다(\.|\?|!| |$)/g, replace: '킨다$1' },
+            { pattern: /집니다(\.|\?|!| |$)/g, replace: '진다$1' },
             { pattern: /습니다(\.|\?|!| |$)/g, replace: '다$1' },
             { pattern: /납니다(\.|\?|!| |$)/g, replace: '난다$1' },
             { pattern: /갑니다(\.|\?|!| |$)/g, replace: '간다$1' },

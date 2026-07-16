@@ -41,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             { pattern: /십니다(\.|\?|!| |$)/g, replace: '시다$1' },
             { pattern: /했습니다(\.|\?|!| |$)/g, replace: '했다$1' },
             { pattern: /였습니다(\.|\?|!| |$)/g, replace: '였다$1' },
-            { pattern: /입니다(\.|\?|!| |$)/g, replace: '이다$1' },
-            { pattern: /합니다(\.|\?|!| |$)/g, replace: '한다$1' }, // 일반 동사는 한다
             { pattern: /됩니다(\.|\?|!| |$)/g, replace: '된다$1' },
             { pattern: /봅니다(\.|\?|!| |$)/g, replace: '본다$1' },
             { pattern: /줍니다(\.|\?|!| |$)/g, replace: '준다$1' },
@@ -107,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { pattern: /드러냅니다(\.|\?|!| |$)/g, replace: '드러낸다$1' },
             { pattern: /더합니다(\.|\?|!| |$)/g, replace: '더한다$1' },
             { pattern: /구합니다(\.|\?|!| |$)/g, replace: '구한다$1' },
+            { pattern: /입니다(\.|\?|!| |$)/g, replace: '이다$1' },
+            { pattern: /합니다(\.|\?|!| |$)/g, replace: '한다$1' },
             { pattern: /습니다(\.|\?|!| |$)/g, replace: '다$1' },
             { pattern: /납니다(\.|\?|!| |$)/g, replace: '난다$1' },
             { pattern: /갑니다(\.|\?|!| |$)/g, replace: '간다$1' },
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 7. 남은 요 제거
         result = result.replace(/([가-힣])요(\.|\?|!| |$)/g, (match, p1, p2) => {
-            const exceptionChars = ['필', '중', '강', '개', '동']; 
+            const exceptionChars = ['필', '중', '강', '개', '동', '소', '수', '주', '종']; 
             if (exceptionChars.includes(p1)) {
                 return match; 
             }
